@@ -1,0 +1,27 @@
+extends header
+block content
+	h1 Tablespaces
+	table.w3-table-all.w3-center.w3-light-grey
+		tr
+			th ID
+			th Name
+			th Status
+			th Content
+			th Used MBs
+			th Free MBs
+			th Total MBs
+			th Free %
+			th Max Size
+			th Timestamp
+		each ts in lista
+			tr
+				td= ts.tablespace_id
+				td= ts.name
+				td= ts.status
+				td= ts.content
+				td= ts.used_mb
+				td= ts.free_mb
+				td= ts.total_mb
+				td= ts.free_percentage
+				td= ts.max_size
+				td= ts.timestamp
